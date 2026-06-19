@@ -1,0 +1,535 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --bg-color: #3C402B;
+    --nav-bg-color: #2a2c22;
+    --text-color: #F2F0E4;
+    --accent-color: #BFC3A4;
+    --card-bg-color: #4A4853;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'EB Garamond', serif;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+}
+.squada-one-regular {
+    font-family: "Squada One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    line-height: 1.6;
+}
+h1, h2, h4 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+h3 {
+    font-family: var(--body-font);
+    font-weight: 700;
+}
+h1 { font-size: 3.5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 1.25rem; }
+section {
+    padding: 5rem 8%;
+}
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* --- Navigation Bar --- */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg-color);
+    padding: 1rem 8%;
+    font-size: 1rem; 
+}
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-logo {
+    height: 40px; 
+    width: auto;
+}
+.nav-brand {
+    font-weight: bold;
+    font-size: 2rem; 
+}
+.nav-center a:hover, .help-link:hover {
+    color: var(--accent-color);
+}
+.help-link { color: #a9a9a9; }
+.search-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 3px;
+}
+.search-container input {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    outline: none;
+    margin-left: 0.5rem;
+    width: 80px;
+}
+.search-container input::placeholder {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* --- Page Header & Hero --- */
+.page-header {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.page-header h1 {
+    margin-bottom: 1rem;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8%;
+}
+.hero-content { flex-basis: 45%; }
+.hero-content p { margin: 1.5rem 0; font-size: 1.5rem; }
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border-radius: 8px;
+}
+.cta-button:hover { 
+    background-color: #d1d4c1;
+    transform: translateY(-3px);
+}
+.hero-image { flex-basis: 50%; }
+.hero-image img { width: 100%; border-radius: 8px; }
+
+/* --- Other Sections --- */
+.mission {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+}
+.mission-text-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.mission-image img { width: 100%; border-radius: 8px; }
+.section-header {
+    margin-bottom: 2rem;
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.blog-card {
+    background: rgba(74, 72, 83, 0.4); 
+    backdrop-filter: blur(10px);         
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); 
+}
+.card-author {
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    color: #f0f0f0; 
+}
+.blog-card img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
+.blog-card h3 { 
+    padding: 1rem; 
+    flex-grow: 1; 
+    color: var(--text-color); 
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+.image-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+.footer-promo h2 { 
+    font-size: 2.5rem; 
+    text-align: center;
+}
+.footer-bottom { text-align: center; padding-top: 4rem;}
+.brand-name-large {
+    font-family: var(--heading-font);
+    font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+.copyright { font-size: 0.9rem; }
+
+/* --- Shop Page Styles --- */
+.shop-content {
+    padding-top: 0;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.product-card {
+    background-color: var(--nav-bg-color);
+    border-radius: 8px;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 0.5rem 0 1rem;
+}
+
+/* --- Cart Icon Badge & Page Styles --- */
+.cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--danger-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.cart-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: var(--nav-bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.cart-item-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.remove-from-cart-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-summary {
+    text-align: right;
+    margin-top: 2rem;
+}
+.cart-summary h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.cart-empty-message {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+}
+
+/* --- Disease Detector Page Styles --- */
+.detector-container {
+    padding: 4rem 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.media-display {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 4 / 3;
+    background-color: var(--nav-bg-color);
+    border: 2px dashed var(--accent-color);
+    border-radius: 8px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.media-display .placeholder-text {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+.media-display video,
+.media-display img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.upload-label {
+    cursor: pointer;
+}
+.diagnose-section {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.result-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 8%;
+    align-items: stretch; /* Ensures cards in the same row have the same height */
+}
+.diagnose-button {
+    width: 100%;
+    padding: 15px 30px;
+    background:#A8E64B;
+    color: var(--bg-color);
+}
+
+.result-placeholder {
+    text-align: center;
+    color: var(--accent-color);
+    align-self: center;
+}
+
+.result-placeholder h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.result-entry {
+    background: linear-gradient(135deg, var(--bg-color) 0%, #4a4853 100%);
+    border-left: 5px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    flex: 1 1 320px; /* Flex-grow, flex-shrink, and basis */
+    display: flex;
+    flex-direction: column;
+}
+
+.result-label {
+    font-size: 1.1rem;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.result-entry h3 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-entry p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Get Help Page Styles --- */
+.help-center {
+    padding: 5rem 8%;
+}
+.faq-container {
+    max-width: 900px;
+    margin: 3rem auto 0 auto;
+}
+.faq-item {
+    background-color: var(--nav-bg-color);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.faq-item h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.faq-item p {
+    color: #ccc;
+    line-height: 1.7;
+}
+.contact-info {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 3rem;
+    background-color: var(--nav-bg-color);
+    border-radius: 8px;
+}
+.contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.contact-info p {
+    margin-bottom: 1.5rem;
+}
+.contact-email {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+.contact-email:hover {
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+/* --- New Benefits Section Styles --- */
+.benefits {
+    padding: 4rem 8%;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.benefit-item i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.benefit-item p {
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* --- New Guideline Section Styles --- */
+.guidelines {
+    background-color: var(--nav-bg-color); /* Darker background to stand out */
+    padding: 4rem 8%;
+}
+
+.guideline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.guideline-item img {
+    width: 100%;
+    max-width: 300px; /* Control image size */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--accent-color);
+}
+
+.guideline-item h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.guideline-item p {
+    color: #ccc;
+    max-width: 300px;
+    margin: 0 auto; /* Center the paragraph text */
+}

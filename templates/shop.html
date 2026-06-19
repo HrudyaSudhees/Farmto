@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Farmto</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/Images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Playfair+Display:wght@700&family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-left">
+            <img src="/static/Images/logo.png" alt="Farmto Logo" class="nav-logo">
+            <a href="/" class="nav-brand">FARMTO</a>
+        </div>
+        <div class="nav-center squada-one-regular">
+            <a href="/">Home</a>
+            <a href="/shop">Shop</a>
+        </div>
+        <div class="nav-right">
+            <a href="/get-help" class="help-link">Get Help</a>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <a href="/cart" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Products</h1>
+            <h3>High-quality seeds and tools for the modern farmer.</h3>
+        </section>
+
+        <section class="shop-content">
+            <div class="product-grid">
+
+                <div class="product-card" data-id="1" data-name="Heirloom Tomato Seeds" data-price="250" data-image="/static/Images/TomatoSeeds.png">
+                    <img src="/static/Images/TomatoSeeds.png" alt="Tomato Seeds">
+                    <h3>Heirloom Tomato Seeds</h3>
+                    <p class="product-price">₹250</p>
+                    <button class="cta-button add-to-cart-btn">Add to Cart</button>
+                </div>
+            
+                <div class="product-card" data-id="2" data-name="Organic Fertilizer" data-price="800" data-image="/static/Images/Fertilizer.png">
+                    <img src="/static/Images/Fertilizer.png" alt="Organic Fertilizer">
+                    <h3>Organic Fertilizer</h3>
+                    <p class="product-price">₹800</p>
+                    <button class="cta-button add-to-cart-btn">Add to Cart</button>
+                </div>
+            
+                <div class="product-card" data-id="3" data-name="Gardening Tool Set" data-price="1500" data-image="/static/Images/ToolSet.png">
+                    <img src="/static/Images/ToolSet.png" alt="Gardening Tools">
+                    <h3>Gardening Tool Set</h3>
+                    <p class="product-price">₹1,500</p>
+                    <button class="cta-button add-to-cart-btn">Add to Cart</button>
+                </div>
+            
+                 <div class="product-card" data-id="4" data-name="Neem Oil Pest Control" data-price="550" data-image="/static/Images/NeemOil.png">
+                    <img src="/static/Images/NeemOil.png" alt="Pest Control Spray">
+                    <h3>Neem Oil Pest Control</h3>
+                    <p class="product-price">₹550</p>
+                    <button class="cta-button add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <h2 class="brand-name-large">FARMTO</h2>
+            <p class="copyright">© 2025 by Farmto.</p>
+        </div>
+    </footer>
+    <script src="/static/script.js"></script>
+</body>
+</html>

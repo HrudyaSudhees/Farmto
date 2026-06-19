@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Detector - Farmto</title>
+    <link rel="icon" href="/static/Images/logo.png">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Playfair+Display:wght@700&family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-left">
+            <img src="/static/Images/logo.png" alt="Farmto Logo" class="nav-logo">
+            <a href="/" class="nav-brand">FARMTO</a>
+        </div>
+        <div class="nav-center squada-one-regular">
+            <a href="/">Home</a>
+            <a href="/shop">Shop</a>
+        </div>
+        <div class="nav-right">
+            <a href="/get-help" class="help-link">Get Help</a>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <a href="/cart" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="guidelines">
+            <div class="section-header">
+                <h2>How to Get the Best Results</h2>
+                <p>Follow these simple steps for the most accurate diagnosis.</p>
+            </div>
+            <div class="guideline-grid">
+                <div class="guideline-item">
+                    <img src="/static/Images/guideline-good.png" alt="A clear, well-lit leaf">
+                    <h3>Use Clear Lighting</h3>
+                    <p>Take photos in bright, natural daylight. Avoid harsh shadows that can hide details.</p>
+                </div>
+                <div class="guideline-item">
+                    <img src="/static/Images/guideline-bad.png" alt="A blurry leaf with a red X">
+                    <h3>Avoid Blurry Images</h3>
+                    <p>Make sure the leaf is in focus and centered in the frame. Blurry images cannot be analyzed correctly.</p>
+                </div>
+                <div class="guideline-item">
+                    <img src="/static/Images/guideline-distance.png" alt="A graphic showing correct camera distance">
+                    <h3>Get the Right Distance</h3>
+                    <p>Hold your camera about 10-15 cm away from the leaf to capture enough detail without being too close.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="detector-container">
+            <div class="section-header">
+                <h2>Ready? Let's Diagnose.</h2>
+                <p>Upload an image or use your camera for an instant diagnosis.</p>
+            </div>
+
+            <div class="media-display">
+                <video id="cameraFeed" autoplay playsinline class="hidden"></video>
+                <img id="imagePreview" src="#" alt="Image Preview" class="hidden">
+                <div id="placeholder" class="placeholder-text">
+                    Your image or camera feed will appear here
+                </div>
+            </div>
+
+            <div class="controls">
+                <label for="uploadInput" class="cta-button upload-label">
+                    <i class="fa-solid fa-upload"></i> Upload Image
+                </label>
+                <input type="file" id="uploadInput" accept="image/*" class="hidden">
+                <button id="startCameraButton" class="cta-button">
+                    <i class="fa-solid fa-camera"></i> Open Camera
+                </button>
+                <button id="captureButton" class="cta-button hidden">
+                    <i class="fa-solid fa-crosshairs"></i> Scan Leaf
+                </button>
+            </div>
+            
+            <div class="diagnose-section">
+                <button id="predictButton" class="cta-button diagnose-button">
+                    Diagnose
+                </button>
+            </div>
+        </div>
+
+        <div class="result-section" id="predictionResult">
+            <div class="result-placeholder">
+            </div>
+        </div>
+
+        <section class="benefits">
+            <div class="section-header">
+                <h2>How This Helps You</h2>
+                <p>Leverage AI for smarter, more profitable farming.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h3>Early Disease Detection</h3>
+                    <p>Identify diseases before they spread across your entire field, minimizing crop loss and protecting your harvest.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <h3>Reduce Costs</h3>
+                    <p>Apply pesticides and treatments only where needed, cutting down on chemical costs and reducing waste.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Increase Yield & Quality</h3>
+                    <p>Healthier plants lead to better quality and higher quantity yields, increasing the profitability of your farm.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h3>Sustainable Farming</h3>
+                    <p>Minimize your environmental footprint by reducing chemical runoff, which helps preserve soil health and biodiversity.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <h2 class="brand-name-large">FARMTO</h2>
+            <p class="copyright">© 2025 by Farmto.</p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

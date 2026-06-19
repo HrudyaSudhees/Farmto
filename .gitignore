@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Git
+.git/
+
+# Large unused models
+Model/best_efficientnetv2_ga.onnx
+Model/best_efficientnetv2_ga (1).pth
+Model/best_pso_convnext_model.pth

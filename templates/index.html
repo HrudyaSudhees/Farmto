@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmto</title>
+    <link rel="stylesheet" href="/static/style.css"> 
+    <link rel="icon" href="/static/Images/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Playfair+Display:wght@700&family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-left">
+            <img src="/static/Images/logo.png" alt="Farmto Logo" class="nav-logo">
+            <a href="/" class="nav-brand">FARMTO</a>
+        </div>
+        <div class="nav-center squada-one-regular">
+            <a href="/">Home</a>
+            <a href="/shop">Shop</a>
+        </div>
+        <div class="nav-right">
+            <a href="/get-help" class="help-link">Get Help</a>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <a href="/cart" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Transforming Agriculture with Intelligent Solutions</h1>
+            <p>Upload your images and receive instant analysis today.</p>
+            <a href="/detect">
+                <button class="cta-button">Get Started</button>
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="/static/Images/hero.png" alt="Farmer holding a fresh tomato">
+        </div>
+    </header>
+
+    <main>
+        <section class="mission">
+            <div class="mission-heading">
+                <h2>Our Mission</h2>
+            </div>
+            <div class="mission-details">
+                <div class="mission-text-grid">
+                    <p>Farmto is dedicated to improving tomato production and health through innovative technology.</p>
+                    <p>Join us in leveraging AI for sustainable agriculture.</p>
+                </div>
+                <div class="mission-image">
+                    <img src="/static/Images/mission.png" alt="Tablet showing plant health analysis">
+                </div>
+            </div>
+        </section>
+
+        <section class="innovations">
+            <div class="section-header">
+                <h2>Blogs</h2>
+            </div>
+            <div class="blog-grid">
+                <a href="https://blog.roboflow.com/tomato-leaf-disease-diagnosis/" class="blog-card" target="_blank">
+                    <div class="card-author">Roboflow</div>
+                    <img src="/static/Images/blog-1.png" alt="Blog post about computer vision">
+                    <h3>Tomato Leaf Disease Detection and Diagnosis using Computer Vision</h3>
+                </a>
+                <a href="https://harshil-patel.medium.com/tomato-leaf-disease-detection-406e2b55a2d7" class="blog-card" target="_blank">
+                    <div class="card-author">Medium</div>
+                    <img src="/static/Images/blog-2.png" alt="Blog post about leaf detection">
+                    <h3>Tomato Leaf Disease Detection</h3>
+                </a>
+                <a href="https://www.sciencedirect.com/science/article/pii/S1877050924009608" class="blog-card" target="_blank">
+                    <div class="card-author">ScienceDirect</div>
+                    <img src="/static/Images/blog-3.png" alt="Blog post about CNNs">
+                    <h3>Tomato Leaf Disease Detection Using CNN</h3>
+                </a>
+            </div>
+        </section>
+
+        <section class="gallery">
+             <div class="section-header">
+                <h2>Gallery</h2>
+            </div>
+            <div class="image-grid">
+                <img src="/static/Images/image1.jpg" alt="Tomato plant">
+                <img src="/static/Images/image2.jpg" alt="Tomato plant">
+                <img src="/static/Images/image3.jpg" alt="Tomato plant">
+                <img src="/static/Images/image4.jpg" alt="Tomato plant">
+                <img src="/static/Images/image5.jpg" alt="Tomato plant">
+		        <img src="/static/Images/image6.jpg" alt="Tomato plant">
+		        <img src="/static/Images/image7.jpg" alt="Tomato plant">
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+             <div class="footer-promo">
+                <h2>Stay connected for the latest updates.</h2>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h2 class="brand-name-large">FARMTO</h2>
+            <p class="copyright">© 2025 by Farmto.</p>
+        </div>
+    </footer>
+    <script src="/static/script.js"></script>
+</body>
+</html>
